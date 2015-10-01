@@ -11,10 +11,12 @@
         if (!this.options.repository) this.options.repository = NAVEEGO_REPO;
         if (!this.options.source) this.options.source = NAVEEGO_SOURCE;
 
-        this.loggingUrl = this.options.logUrl + '/' + this.options.repository + '/' + this.options.source + '/pixel.png';
+        if (this.options.source) {
+            this.loggingUrl = this.options.logUrl + '/' + this.options.repository + '/' + this.options.source + '/pixel.png';
+        } else {
+            this.loggingUrl = this.options.logUrl + '/' + this.options.repository + '/pixel.png';
+        }
     }
-
-
 
     NaveegoLogger.prototype = {
 

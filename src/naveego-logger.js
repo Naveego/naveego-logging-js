@@ -1,4 +1,7 @@
-﻿(function (window) {
+﻿//
+// Naveego Logger - version 0.9.0
+//
+(function (window) {
 
     var NAVEEGO_LOG_URL = window.naveegoLogging.loggingUrl,
         NAVEEGO_REPO = window.naveegoLogging.repository,

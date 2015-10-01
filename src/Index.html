@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Logging Test</title>
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">
+        var naveegoLogging = {
+            loggingUrl: "http://dev-bbeirv171.breitburn.com:41333",
+            repository: "breitburn",
+            source: "test-js-app",
+            sendConsoleErrors: true
+        };
+    </script>
+    <script type="text/javascript" src="naveego-logger.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#logButton').click(function () {
+                var logger = new NaveegoLogger(),
+                    msg = $("[name=message]").val();
+
+                logger.log({ message: msg });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <label>Log Message:</label>
+    <input type="text" name="message" />
+    <input id="logButton" type="button" value="Send Log" />
+</body>
+</html>
